@@ -37,7 +37,7 @@ This project implements a backend service with database integration, RESTful rou
 ```pip install -r requirements.txt``` 
 
 ### 3. Run API
-```uvicorn main:app --reload```<br />
+```python3 run_TaskCore.py```<br />
 
 ### 4. Explore the docs
 Swagger UI → http://127.0.0.1:8000/docs
