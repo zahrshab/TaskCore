@@ -28,6 +28,18 @@ def get_all_tasks(session: Session = Depends(get_session)):
         raise HTTPException(status_code=404, detail="No available tasks")
     return found_tasks
 
+@router.patch("/tasks/{id}")
+def update_task(id: int, task: Task, session: Session = Depends(get_session)): 
+    found_task = session.get(Task, id)
+    if not found_task:
+        raise HTTPException(status_code=406, detail="Task does not exist")
+    task_data = task.model_dump(exclude_unset=True)
+    found_task.sqlmodel_update(task_data)
+    session.add(found_task)
+    session.commit()
+    session.refresh(found_task)
+    return {"message": f"Item {id} is updated"}
+
 @router.delete("/tasks/{id}")
 def delete_task(id: int, session: Session = Depends(get_session)): 
     found_task = session.get(Task, id)
