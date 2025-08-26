@@ -1,6 +1,6 @@
-TASKCORE
+# TASKCORE
 
-A modular **task management API** built with **FastAPI** and **SQLModel**.
+An adaptive **task management API** built with **FastAPI** and **SQLModel**.
 This project implements a backend service with database integration, RESTful routes and structured project architecture.
 
 ## Features
@@ -13,12 +13,12 @@ This project implements a backend service with database integration, RESTful rou
 - Interactive dovumentation via Swagger UI ('/docs')
 
 ## Project Architecture
-**main.py** - application entry point
-**database.py** - DB engine, DB initializer, session handler
-**task.py** - Task models (ORM)
-**task_routes.py** - All Task CRUD endpoints
-**task.db** - SQLite database
-**README.md**
+- **main.py** - application entry point
+- **database.py** - DB engine, DB initializer, session handler
+- **task.py** - Task models (ORM)
+- **task_routes.py** - All Task CRUD endpoints
+- **task.db** - SQLite database
+- **README.md**
 
 ## Tech Stack 
 - **FastAPI** – modern Python web framework for building APIs
@@ -27,18 +27,17 @@ This project implements a backend service with database integration, RESTful rou
 - **Uvicorn** – lightning-fast ASGI server
 
 ## Getting Started
-###1. Clone the repository 
-"```bash
-git clone https://github.com/<your-username>/taskforge-api.git
-cd taskforge-api "
+### 1. Clone the repository 
+```git clone https://github.com/<your-username>/TaskCore.git```<br />
+```cd TaskCore```
 
-###2.Create virtual environment & install dependencies
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+### 2.Create virtual environment & install dependencies
+```python3 -m venv venv``` <br />
+```source venv/bin/activate``` <br />
+```pip install -r requirements.txt``` 
 
-###3. Run API
-uvicorn main:app --reload
+### 3. Run API
+```uvicorn main:app --reload```<br />
 
-###4. Explore the docs
+### 4. Explore the docs
 Swagger UI → http://127.0.0.1:8000/docs
