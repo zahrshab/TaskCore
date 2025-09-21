@@ -1,7 +1,7 @@
 # TASKCORE
 
 An adaptive **task management API** built with **FastAPI** and **SQLModel**.
-This project implements a backend service with database integration, RESTful routes and structured project architecture.
+This project implements a backend service with database integration and RESTful routes.
 
 ## Features
 - CRUD operations for tasks (Create, Read, Update, Delete)
